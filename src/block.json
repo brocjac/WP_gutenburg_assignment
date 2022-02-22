@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "jbrock/dat-assignment",
+	"version": "0.1.0",
+	"title": "Assignment",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Hopefully this works this time... AGAIN!",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "dat-assignment",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"keywords": ["assign", "cool", "datboi"],
+	"attributes": {
+	  "quote": {
+		"type": "string",
+		"source": "html",
+		"selector": ".quote"
+	  },
+	  "imgUrl": {
+		"type": "string",
+		"default": "http://placehold.it/75"
+	  },
+	  "date": {
+		"type": "string",
+		"default": false
+	  },
+	  "backgroundColor": {
+		"type": "string"
+	  },
+	  "textColor": {
+		"type": "string"
+	  },
+	  "backgroundColorClass": {
+		"type": "string"
+	  },
+	  "textColorClass": {
+		"type": "string"
+	  },
+	  "borderColor": {
+		"type": "string"
+	  }
+	}
+}

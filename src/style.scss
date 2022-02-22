@@ -1,0 +1,40 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-jbrock-dat-assignment {
+  background-color: #dadada;
+  color: #000;
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+
+  &.bg-primary-blue {
+	background-color: deepskyblue;
+  }
+
+  &.bg-primary-red {
+	background-color: red;
+  }
+
+  .quote-profile {
+	width: 20%;
+  }
+
+  img {
+	width: 100%;
+	border-radius: 100%;
+	padding: 10px;
+  }
+
+  .quote {
+	background-color: #fff;
+	margin: 10px;
+	border-radius: 20px;
+	padding-left: 20px;
+	width: 80%;
+  }
+}
