@@ -1,1 +1,44 @@
-.wp-block-jbrock-dat-assignment{background-color:#dadada;color:#000;display:flex;flex-wrap:nowrap;padding:10px}.wp-block-jbrock-dat-assignment.bg-primary-blue{background-color:#00bfff}.wp-block-jbrock-dat-assignment.bg-primary-red{background-color:red}.wp-block-jbrock-dat-assignment .quote-profile{width:20%}.wp-block-jbrock-dat-assignment img{border-radius:100%;padding:10px;width:100%}.wp-block-jbrock-dat-assignment .quote{background-color:#fff;border-radius:20px;margin:10px;padding-left:20px;width:80%}
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-jbrock-dat-assignment {
+  background-color: #dadada;
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #000;
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.wp-block-jbrock-dat-assignment.bg-primary-blue {
+  background-color: deepskyblue;
+}
+.wp-block-jbrock-dat-assignment.bg-primary-red {
+  background-color: red;
+}
+.wp-block-jbrock-dat-assignment .datetime {
+  text-align: center;
+}
+.wp-block-jbrock-dat-assignment .quote-profile {
+  width: 20%;
+}
+.wp-block-jbrock-dat-assignment img {
+  width: 100%;
+  border-radius: 100%;
+  padding: 10px;
+}
+.wp-block-jbrock-dat-assignment .quote {
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 5px 20px 5px 20px;
+  width: 80%;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

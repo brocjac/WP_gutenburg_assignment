@@ -1,33 +1,30 @@
 //import {InspectorControls, PanelColorSettings, getColorClassName, getColorObjectByColorValue} from "@wordpress/block-editor";
 //import {ColorPalette, ColorPicker, PanelBody, PanelRow, SelectControl} from "@wordpress/components";
 import {InspectorControls, ColorPalette} from "@wordpress/block-editor";
-import {PanelBody, PanelRow, SelectControl, ColorPicker, ComboboxControl} from "@wordpress/components";
+import {PanelBody, PanelRow, SelectControl, ColorPicker} from "@wordpress/components";
 import {select} from '@wordpress/data';
-import {useState} from '@wordpress/element';
 export class BlockSettings extends React.Component {
 	render() {
 		let {attributes, setAttributes} = this.props
 		const settings = select('core/editor').getEditorSettings();
 		const options = [
 			{
-				value: 'small',
+				value: '16px',
 				label: 'Small',
 			},
 			{
-				value: 'normal',
+				value: '18x',
 				label: 'Normal',
 			},
 			{
-				value: 'large',
+				value: '20px',
 				label: 'Large',
 			},
 			{
-				value: 'huge',
+				value: '24px',
 				label: 'Huge',
 			},
 		]
-		const [ fontSize, setFontSize ] = useState();
-		const [ filteredOptions, setFilteredOptions ] = useState( options );
 		return (
 			<InspectorControls>
 				<PanelBody title="Basic" initialOpen={true}>
@@ -64,20 +61,11 @@ export class BlockSettings extends React.Component {
 					</PanelRow>
 				</PanelBody>
 				<PanelBody title="Text Layout">
-					<ComboboxControl
+					<SelectControl
 						label="Font Size"
-						value={fontSize}
-						onChange={setFontSize}
-						options={filteredOptions}
-						onFilterValueChange={(inputValue) =>
-						setFilteredOptions(
-							options.filter((option)=>
-								option.label
-									.toLowerCase()
-									.startsWith(inputValue.toLowerCase())
-							)
-						)
-					}
+						value={attributes.fontSize}
+						onChange={fontSize => setAttributes({fontSize})}
+						options={options}
 					/>
 				</PanelBody>
 			</InspectorControls>

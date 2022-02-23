@@ -12,7 +12,6 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-
 /**
  * The save function defines the way in which the different attributes should
  * be combined into the final markup, which is then serialized by the block
@@ -26,21 +25,22 @@ export default function save({attributes}) {
 	const {date} = attributes;
 	let divStyle = {
 		color: attributes.textColorClass ? '' : attributes.textColor,
-		backgroundColor: attributes.backgroundColor
+		backgroundColor: attributes.backgroundColor,
 	}
 	let divClasses = [
 		attributes.backgroundColorClass,
 		attributes.textColorClass
 	]
+	console.log(divClasses);
 	return (
-		<div {...useBlockProps.save({className: divClasses, style: divStyle})}>
+		<div {...useBlockProps.save({className: attributes.backgroundColorClass, style: divStyle})}>
 			<div className="quote-profile">
 				<div className="photo">
 					<img src={attributes.imgUrl} alt={"photo of _____"} />
 				</div>
-				<p>{date}</p>
+				<p className="datetime">{date}</p>
 			</div>
-			<RichText.Content
+			<RichText.Content style={{fontSize: attributes.fontSize}}
 				tagName="div"
 				className="quote"
 				value={attributes.quote}

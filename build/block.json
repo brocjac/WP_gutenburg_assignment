@@ -43,6 +43,9 @@
 	  },
 	  "borderColor": {
 		"type": "string"
+	  },
+	  "fontSize": {
+		"type": "string"
 	  }
 	}
 }
